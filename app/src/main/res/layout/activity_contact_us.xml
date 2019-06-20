@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.openthedoorprovider.ContactUsActivity"
+    >
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/phone"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/forgetPass_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Contact Us"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/forgetPass_back_txtV_id"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ic_arrow_back_white_24dp"
+                android:scaleType="fitXY" />
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+
+
+
+    <TextView
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Phone:"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:drawableLeft="@drawable/login_phone"
+        app:layout_constraintStart_toStartOf="parent"
+        android:drawablePadding="15sp"
+        android:textColor="@color/black"
+        android:id="@+id/phone"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:text="01146578999"
+        app:layout_constraintTop_toBottomOf="@+id/phone"
+        app:layout_constraintStart_toStartOf="@id/phone"
+        android:drawablePadding="15sp"
+        android:id="@+id/phone_text"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        android:text="Address:"
+        app:layout_constraintTop_toBottomOf="@+id/phone_text"
+        app:layout_constraintStart_toStartOf="@id/phone"
+        android:drawableLeft="@drawable/map_address"
+        android:drawablePadding="15sp"
+        android:textColor="@color/black"
+        android:id="@+id/address"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:text="Street,Area,Countery,City."
+        app:layout_constraintTop_toBottomOf="@+id/address"
+        app:layout_constraintStart_toStartOf="@id/phone"
+        android:drawablePadding="15sp"
+        android:id="@+id/address_text"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        android:text="Website:"
+        app:layout_constraintTop_toBottomOf="@+id/address_text"
+        app:layout_constraintStart_toStartOf="@id/phone"
+        android:drawableLeft="@drawable/contact_web"
+        android:drawablePadding="15sp"
+        android:textColor="@color/black"
+        android:id="@+id/website"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:text="www.company.com"
+        app:layout_constraintTop_toBottomOf="@+id/website"
+        app:layout_constraintStart_toStartOf="@id/phone"
+        android:drawablePadding="15sp"
+        android:id="@+id/website_text"
+        />
+
+    </android.support.constraint.ConstraintLayout>
+

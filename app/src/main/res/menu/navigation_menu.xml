@@ -1,0 +1,56 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+
+
+    <group
+        android:checkableBehavior="single"
+        >
+        <item android:id="@+id/profile"
+            android:icon="@drawable/sidemenu_profile"
+            android:title="@string/profile"/>
+
+        <item android:id="@+id/history"
+            android:icon="@drawable/sidemenu_history"
+            android:title="@string/history"/>
+
+
+        <item android:id="@+id/reviews"
+            android:icon="@drawable/sidemenu_reviews"
+            android:title="@string/reviews"/>
+
+        <item android:id="@+id/statistics"
+            android:icon="@drawable/sidemenu_statistics"
+            android:title="@string/statistics"
+            android:iconTint="@color/colorPrimary"
+            />
+
+
+        <item android:id="@+id/notifications"
+            android:icon="@drawable/sidemenu_notification"
+            android:title="@string/notifications"/>
+
+    </group>
+
+
+    <group
+        android:id="@+id/bottom"
+        android:checkableBehavior="single"
+        >
+        <item android:id="@+id/contact_us"
+            android:icon="@drawable/sidemenu_contact"
+            android:title="@string/contact_us"/>
+
+        <item android:id="@+id/about_company"
+            android:icon="@drawable/sidemenu_help"
+            android:title="@string/about_company"
+            />
+
+    </group>
+
+
+
+
+
+</menu>

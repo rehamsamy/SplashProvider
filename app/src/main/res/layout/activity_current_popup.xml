@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".popupActivity.CurrentPopupActivity"
+    android:id="@+id/current_popup_layout"
+
+
+    >
+
+
+    <FrameLayout
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/frame_root"
+        android:layout_height="wrap_content">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="@color/white"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="User Name"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/user_name"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/service_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/service_type"
+                app:layout_constraintTop_toBottomOf="@+id/user_name"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="82dp" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/make_call"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/make_call"/>
+
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/user_name"
+                android:rating="4"
+                android:id="@+id/rating_item"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/service_type_value"
+                android:drawableStart="@drawable/service_type"
+                app:layout_constraintStart_toStartOf="@id/service_type"
+                app:layout_constraintTop_toBottomOf="@id/service_type"
+                android:drawablePadding="15dp"
+                android:text="@string/service_type_text"
+                android:textSize="15sp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Service Provider Info:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:id="@+id/service_provider_info"
+                app:layout_constraintTop_toBottomOf="@+id/service_type_value"
+                app:layout_constraintStart_toStartOf="@id/service_type_value"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/provider_price"
+                app:layout_constraintStart_toStartOf="@id/service_type"
+                app:layout_constraintTop_toBottomOf="@id/service_provider_info"
+                android:textColor="@color/colorPrimary"
+                android:text="@string/provider_price"
+                android:textSize="15sp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/client_location"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:id="@+id/client_location"
+                app:layout_constraintTop_toBottomOf="@+id/provider_price"
+                app:layout_constraintStart_toStartOf="@id/service_type_value"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/time_to_arrival"
+                app:layout_constraintTop_toBottomOf="@id/provider_price"
+                android:textColor="@color/colorPrimary"
+                android:text="@string/time_to_arrival"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="15sp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/client_location_value"
+                android:drawablePadding="15dp"
+                android:drawableStart="@drawable/map_address"
+                app:layout_constraintStart_toStartOf="@id/service_type"
+                app:layout_constraintTop_toBottomOf="@id/client_location"
+                android:text="@string/location"
+                android:textSize="15sp"/>
+
+
+
+            <com.google.android.gms.maps.MapView
+                android:layout_width="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/start_service"
+                android:layout_height="150dp"
+                android:id="@+id/map_view"
+                app:layout_constraintTop_toBottomOf="@+id/client_location_value"
+                android:layout_marginTop="@dimen/margin_top"/>
+
+
+
+           <android.support.design.button.MaterialButton
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               android:background="@color/colorPrimary"
+               android:text="@string/start_service"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintTop_toBottomOf="@id/map_view"
+               android:layout_marginTop="@dimen/margin_top"
+               android:id="@+id/start_service"/>
+
+
+
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/signup_user_pic"
+            android:layout_gravity="center_horizontal|fill_vertical"/>
+    </FrameLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>
