@@ -52,10 +52,10 @@ public class SignInActivity extends AppCompatActivity {
                 if(!FUtilsValidation.isEmpty(phoneInput.getEditText(),"please enter your phone number !")
                         && FUtilsValidation.isPhone(phoneInput.getEditText().toString())
                         &&!FUtilsValidation.isEmpty(passwordInput.getEditText(),"please enter password !")
-                        ) {
+                        )
+
 
                     startActivity(new Intent(getApplicationContext(), HomeActivity.class));
-                }
             }
         });
 

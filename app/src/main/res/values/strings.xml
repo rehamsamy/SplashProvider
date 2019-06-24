@@ -1,54 +1,83 @@
 <resources>
-    <string name="app_name">SplashProvider</string>
-    <string name="phone">Phone</string>
-    <string name="password">Password</string>
-    <string name="sign_in">Sign In</string>
-    <string name="forgit_password">Forget Password</string>
-    <string name="dont_have_account">Dont hava an account?</string>
-    <string name="sign_up">Sign Up</string>
-    <string name="user_name">jhon deao</string>
-    <string name="confirm_password">Confirm Password</string>
-    <string name="send_code">Send Code</string>
-    <string name="search">search</string>
-    <string name="current_location">Current Location</string>
-    <string name="location">Street,area,country,city.</string>
-    <string name="find_job">Find a job</string>
-    <string name="log_out">Log Out</string>
-    <string name="profile">Profile</string>
-    <string name="history">History</string>
-    <string name="reviews">Reviews</string>
-    <string name="statistics">Statistics</string>
-    <string name="notifications">Notifications</string>
-    <string name="contact_us">Contact Us</string>
-    <string name="about_company">About Company</string>
-    <string name="email">email@gmail.com</string>
-    <string name="phone_number">012345689090</string>
-    <string name="user_email">email@gmail.com</string>
-    <string name="service_setting">Service Setting</string>
-    <string name="change_password">Change password</string>
-    <string name="edit_profile">Edit Profile Data</string>
-    <string name="save">Save</string>
-    <string name="old_password">Old Password</string>
-    <string name="new_password">New Password</string>
-    <string name="confirm_new_password">Confirm New Password</string>
-    <string name="select_service">Select Service</string>
-    <string name="cost_per_hour">cost per hours:</string>
-    <string name="cost">10</string>
-    <string name="currency">$ USD</string>
-    <string name="done">Done</string>
-    <string name="service_type_text">maintance</string>
-    <string name="time_to_arrival">10 minutes to arrive</string>
-    <string name="service_type">Service Type:</string>
-    <string name="your_location">Your Location:</string>
-    <string name="switch_text">Activation of receiving applications.</string>
-    <string name="ignore">Ignore</string>
-    <string name="start_service">Start Service</string>
-    <string name="price">10 $/hour</string>
-    <string name="end_service">End Service</string>
-    <string name="client_location">Client Location</string>
-    <string name="notes_txt">here will view any notes about this person</string>
-    <string name="open">open</string>
-    <string name="close">close</string>
-    <string name="report_proplem">Report Problem</string>
+    <string name="app_name" translatable="false">SplashProvider</string>
+    <string name="phone" translatable="false">Phone</string>
+    <string name="password" translatable="false">Password</string>
+    <string name="sign_in" translatable="false">Sign In</string>
+    <string name="forgit_password" translatable="false">Forget Password</string>
+    <string name="dont_have_account" translatable="false">Dont hava an account?</string>
+    <string name="sign_up" translatable="false">Sign Up</string>
+    <string name="user_name" translatable="false">jhon deao</string>
+    <string name="confirm_password" translatable="false">Confirm Password</string>
+    <string name="send_code" translatable="false">Send Code</string>
+    <string name="search" translatable="false">search</string>
+    <string name="current_location" translatable="false">Current Location</string>
+    <string name="location" translatable="false">Street,area,country,city.</string>
+    <string name="find_job" translatable="false">Find a job</string>
+    <string name="log_out" translatable="false">Log Out</string>
+    <string name="profile" translatable="false">Profile</string>
+    <string name="history" translatable="false">History</string>
+    <string name="reviews" translatable="false">Reviews</string>
+    <string name="statistics" translatable="false">Statistics</string>
+    <string name="notifications" translatable="false">Notifications</string>
+    <string name="contact_us" translatable="false">Contact Us</string>
+    <string name="about_company" translatable="false">About Company</string>
+    <string name="email" translatable="false">email@gmail.com</string>
+    <string name="phone_number" translatable="false">012345689090</string>
+    <string name="user_email" translatable="false">email@gmail.com</string>
+    <string name="service_setting" translatable="false">Service Setting</string>
+    <string name="change_password" translatable="false">Change password</string>
+    <string name="edit_profile" translatable="false">Edit Profile Data</string>
+    <string name="save" translatable="false">Save</string>
+    <string name="old_password" translatable="false">Old Password</string>
+    <string name="new_password" translatable="false">New Password</string>
+    <string name="confirm_new_password" translatable="false">Confirm New Password</string>
+    <string name="select_service" translatable="false">Select Service</string>
+    <string name="cost_per_hour" translatable="false">cost per hours:</string>
+    <string name="cost" translatable="false">10</string>
+    <string name="currency" translatable="false">$ USD</string>
+    <string name="done" translatable="false">Done</string>
+    <string name="service_type_text" translatable="false">maintance</string>
+    <string name="time_to_arrival" translatable="false">10 minutes to arrive</string>
+    <string name="service_type" translatable="false">Service Type:</string>
+    <string name="your_location" translatable="false">Your Location:</string>
+    <string name="switch_text" translatable="false">Activation of receiving applications.</string>
+    <string name="ignore" translatable="false">Ignore</string>
+    <string name="start_service" translatable="false">Start Service</string>
+    <string name="price" translatable="false">10 $/hour</string>
+    <string name="end_service" translatable="false">End Service</string>
+    <string name="client_location" translatable="false">Client Location</string>
+    <string name="notes_txt" translatable="false">here will view any notes about this person</string>
+    <string name="open" translatable="false">open</string>
+    <string name="close" translatable="false">close</string>
+    <string name="report_proplem" translatable="false">Report Problem</string>
     <string name="provider_price">10 $/hour</string>
+    <string name="userName">User Name</string>
+    <string name="enter_review">write your review here</string>
+    <string name="cancell_reason">Reason for cacellation?</string>
+    <string name="write_reason">Write here the reasons....</string>
+    <string name="notes">Notes</string>
+    <string name="houres_server_provider">Houres of service provider:</string>
+    <string name="provider_houres_value">73 houres</string>
+    <string name="give_bonus">Give bonus:</string>
+    <string name="give_bonus_value">10 $</string>
+    <string name="service_provider_cost">Cost of service provider:</string>
+    <string name="service_provider_cost_value">730$</string>
+    <string name="discount">Discount:</string>
+    <string name="discount_value">30$</string>
+    <string name="total_cost">Total cost:</string>
+    <string name="total_cost_value">710$</string>
+    <string name="min_max_charg">minimum charge :100$, maxium charge :1000$</string>
+    <string name="address">Address:</string>
+    <string name="website">Website:</string>
+    <string name="server_provider_info">Service Provider Info:</string>
+    <string name="confirm">Confirm</string>
+    <string name="finish_time_service">Finish Time of Service:</string>
+    <string name="report_problem_about">Report a problem about ...</string>
+    <string name="report_proplem_value">Write here the reasons....</string>
+    <string name="reviews_num">No.Reviews:150 Reviews</string>
+    <string name="total_rate_value">Total rate:1.5</string>
+    <string name="continue_btn">Continue</string>
+    <string name="upload_image_btn">Upload the requried files:</string>
+    <string name="verify">Verify</string>
+    <string name="required_service_type">Required service:maintenance</string>
 </resources>

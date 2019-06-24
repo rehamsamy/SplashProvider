@@ -103,13 +103,13 @@
                     android:id="@+id/total_rate_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Total rate:1.5" />
+                    android:text="@string/total_rate_value" />
 
                 <TextView
                     android:id="@+id/num_review_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="No.Reviews:150 Reviews"
+                    android:text="@string/reviews_num"
                     android:layout_marginLeft="@dimen/margin_left"/>
 
             </LinearLayout>

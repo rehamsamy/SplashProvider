@@ -86,7 +86,7 @@
                 android:layout_marginTop="@dimen/margin_top"
                 android:background="@color/colorPrimary"
                 android:backgroundTint="@color/colorPrimary"
-                android:text="Continue"
+                android:text="@string/continue_btn"
                 android:textColor="#ffff"
                 app:layout_constraintEnd_toEndOf="@id/phone_input_layout"
                 app:layout_constraintStart_toStartOf="@id/phone_input_layout"

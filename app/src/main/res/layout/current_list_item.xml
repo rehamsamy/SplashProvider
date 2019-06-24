@@ -25,7 +25,7 @@
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
         android:maxLines="1"
-        android:text="user name"
+        android:text="@string/userName"
         android:textColor="@android:color/black"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@id/rating_item"

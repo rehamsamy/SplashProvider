@@ -1,6 +1,7 @@
 package com.openthedoorprovider;
 
 import android.content.Intent;
+import android.support.design.button.MaterialButton;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,7 +19,8 @@ public class EditProfileDataActivity extends AppCompatActivity {
     @BindView(R.id.edit_name) TextInputLayout editNameInput;
     @BindView(R.id.edit_email) TextInputLayout editEmailInput;
     @BindView(R.id.edit_phone) TextInputLayout editPhoneInput;
-    @BindView(R.id.save_btn) TextInputLayout saveBtn;
+    @BindView(R.id.save_btn)
+    MaterialButton saveBtn;
 
 
     @Override

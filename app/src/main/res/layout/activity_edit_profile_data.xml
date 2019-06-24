@@ -124,11 +124,10 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableStart="@drawable/signup_email"
+                android:drawableStart="@drawable/login_phone"
                 android:drawablePadding="14dp"
                 android:inputType="number"
-               android:hint="@string/phone"
-                android:drawableLeft="@drawable/signup_email" />
+               android:hint="@string/phone" />
 
         </android.support.design.widget.TextInputLayout>
 

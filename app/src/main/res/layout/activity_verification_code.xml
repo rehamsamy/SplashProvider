@@ -90,7 +90,7 @@
                 android:textColor="#ffff"
                 android:backgroundTint="@color/colorPrimary"
                 android:textAllCaps="false"
-                android:text="Verify"/>
+                android:text="@string/verify"/>
 
 
         </android.support.constraint.ConstraintLayout>

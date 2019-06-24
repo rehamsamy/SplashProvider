@@ -43,7 +43,8 @@
        <FrameLayout
         android:layout_width="match_parent"
         android:layout_gravity="center"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+           >
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -104,7 +105,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Upload the requried files:"
+                android:text="@string/upload_image_btn"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintTop_toBottomOf="@+id/email_input_layout"
@@ -131,15 +132,74 @@
                 android:id="@+id/drafts"
                 android:text="(ID photo,Licences,...)"/>
 
-            <android.support.v7.widget.RecyclerView
-                app:layout_constraintTop_toBottomOf="@+id/drafts"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:id="@+id/image_recycler"
-                app:layout_constraintStart_toStartOf="@id/username_input_layout"
-                app:layout_constraintEnd_toEndOf="@id/username_input_layout"
-                android:layout_marginTop="20sp"
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/upload_image_img"
+                app:layout_constraintTop_toTopOf="@+id/delete1"
+                app:layout_constraintBottom_toBottomOf="@id/delete1"
+                app:layout_constraintStart_toStartOf="@id/drafts"
+                android:alpha=".5"
+                android:id="@+id/image1"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/image1"
+                app:layout_constraintTop_toTopOf="@+id/delete2"
+                app:layout_constraintBottom_toBottomOf="@id/delete2"
+                app:layout_constraintStart_toStartOf="@id/drafts"
+                android:alpha=".5"
+                android:id="@+id/image2"
+               />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/image2"
+                app:layout_constraintTop_toTopOf="@+id/delete3"
+                app:layout_constraintBottom_toBottomOf="@id/delete3"
+                app:layout_constraintStart_toStartOf="@id/drafts"
+                android:alpha=".5"
+                android:id="@+id/image3" />
+
+            <ImageView
+                android:id="@+id/delete1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/signup_delete"
+                app:layout_constraintEnd_toEndOf="@id/upload_image_img"
+                app:layout_constraintStart_toStartOf="@id/upload_image_img"
+                app:layout_constraintTop_toBottomOf="@+id/upload_image_img"
+                android:visibility="invisible"/>
+
+            <ImageView
+                android:id="@+id/delete2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/signup_delete"
+                app:layout_constraintTop_toBottomOf="@+id/delete1"
+                app:layout_constraintStart_toStartOf="@id/upload_image_img"
+                app:layout_constraintEnd_toEndOf="@id/upload_image_img"
+                android:visibility="invisible"
                 />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/signup_delete"
+               app:layout_constraintStart_toStartOf="@id/upload_image_img"
+                app:layout_constraintTop_toBottomOf="@id/delete2"
+                app:layout_constraintEnd_toEndOf="@id/upload_image_img"
+                android:id="@+id/delete3"
+                android:visibility="invisible"
+
+                />
+
 
 
             <android.support.design.button.MaterialButton
@@ -148,12 +208,12 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:id="@+id/continue_btn"
-                app:layout_constraintTop_toBottomOf="@+id/image_recycler"
+                app:layout_constraintTop_toBottomOf="@+id/delete3"
                 android:background="@color/colorPrimary"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:textColor="#ffff"
                 android:backgroundTint="@color/colorPrimary"
-                android:text="Continue"
+                android:text="@string/continue_btn"
                 android:textAllCaps="false"/>
 
         </android.support.constraint.ConstraintLayout>

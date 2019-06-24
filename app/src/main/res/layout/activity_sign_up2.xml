@@ -88,7 +88,7 @@
             android:textColor="#ffff"
             android:backgroundTint="@color/colorPrimary"
             android:id="@+id/continue_btn"
-            android:text="Continue"
+            android:text="@string/continue_btn"
             android:textAllCaps="false"/>
 
 
