@@ -35,6 +35,16 @@
 
 
     <group
+        android:checkableBehavior="single">
+
+        <item android:id="@+id/setting"
+            android:icon="@drawable/sidemenu_help"
+            android:title="@string/setting"/>
+    </group>
+
+
+
+    <group
         android:id="@+id/bottom"
         android:checkableBehavior="single"
         >
@@ -48,6 +58,8 @@
             />
 
     </group>
+
+
 
 
 

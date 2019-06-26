@@ -1,6 +1,7 @@
 package com.openthedoorprovider;
 
 import android.content.Intent;
+import android.support.design.button.MaterialButton;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,7 +20,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
     @BindView(R.id.new_password) TextInputLayout newPasswordInput;
     @BindView(R.id.confirm_new_password) TextInputLayout confirmPasswordInput;
 
-    @BindView(R.id.change_password_btn) TextInputLayout changePasswordBtn;
+    @BindView(R.id.change_password_btn) MaterialButton changePasswordBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

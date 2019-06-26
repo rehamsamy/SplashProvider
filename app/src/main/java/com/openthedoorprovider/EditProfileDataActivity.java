@@ -44,7 +44,6 @@ public class EditProfileDataActivity extends AppCompatActivity {
                 if(!FUtilsValidation.isEmpty(editEmailInput.getEditText(),"please enter your email!")
                 && !FUtilsValidation.isEmpty(editNameInput.getEditText(),"please enter your name!")
                 &&!FUtilsValidation.isEmpty(editPhoneInput.getEditText(),"please enter your phone!")
-                && FUtilsValidation.isPhone(editPhoneInput.getEditText().toString())
                         && FUtilsValidation.isValidEmail(editEmailInput.getEditText(),"please enter  valid email!")){
 
                 }

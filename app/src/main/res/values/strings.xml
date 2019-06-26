@@ -80,4 +80,5 @@
     <string name="upload_image_btn">Upload the requried files:</string>
     <string name="verify">Verify</string>
     <string name="required_service_type">Required service:maintenance</string>
+    <string name="setting">Setting</string>
 </resources>

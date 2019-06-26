@@ -1,6 +1,8 @@
 package com.openthedoorprovider;
 
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.support.annotation.NonNull;
 import android.support.design.button.MaterialButton;
 import android.support.design.widget.NavigationView;
@@ -9,6 +11,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.DisplayMetrics;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -21,6 +24,8 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.util.Locale;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -31,6 +36,8 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
     @BindView(R.id.nv) NavigationView navigationView;
     @BindView(R.id.drawer_layout) DrawerLayout drawerLayout;
     @BindView(R.id.find_job_btn) MaterialButton findJobBtn;
+
+    public static final String lang="en";
     ActionBarDrawerToggle toggle;
     GoogleMap googleMap;
     @Override
@@ -85,6 +92,11 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
                     case R.id.statistics:
                         startActivity(new Intent(getApplicationContext(), StatisticsActivity.class));
 
+                        break;
+                    case R.id.setting:
+                        setLocale("ar");
+                        break;
+
 
 
 
@@ -105,6 +117,25 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         });
 
+
+    }
+
+
+    public void setLocale( String lang) {
+
+        Locale myLocale = new Locale(lang);
+        Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration conf = res.getConfiguration();
+        conf.locale = myLocale;
+        res.updateConfiguration(conf, dm);
+
+        Configuration config = new Configuration();
+
+        getBaseContext().getResources().updateConfiguration(config,getBaseContext().getResources().getDisplayMetrics());
+
+        Intent refresh = new Intent(this, HomeActivity.class);
+        startActivity(refresh);
 
     }
 

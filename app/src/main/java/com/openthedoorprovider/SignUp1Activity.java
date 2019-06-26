@@ -35,7 +35,7 @@ public class SignUp1Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(!FUtilsValidation.isEmpty(phoneInput.getEditText(),"please enter your phone number!")
-                        &&FUtilsValidation.isPhone(phoneInput.getEditText().toString())) {
+                       ) {
 
                     startActivity(new Intent(getApplicationContext(), SignUp2Activity.class));
                 }

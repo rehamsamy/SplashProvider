@@ -17,6 +17,11 @@
         android:required="true" />
 
     <application
+
+
+        android:configChanges="locale|orientation|keyboardHidden"
+        android:noHistory="true"
+
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -24,21 +29,25 @@
         android:supportsRtl="false"
         android:theme="@style/AppTheme"
         tools:replace="android:supportsRtl">
-        <activity android:name=".SignUp3Activity">
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignInActivity" />
+        <activity android:name=".SignUp3Activity">
+
+        </activity>
+        <activity android:name=".SignInActivity">
+       </activity>
         <activity android:name=".SignUp1Activity" />
         <activity android:name=".SignUp2Activity" />
         <!--<activity android:name=".SignUp3Activity" />-->
         <activity android:name=".SignUp4Activity" />
         <activity android:name=".VerificationCodeActivity" />
         <activity android:name=".ForgetPasswordActivity" />
-        <activity android:name=".HomeActivity" />
+        <activity android:name=".HomeActivity" ></activity>
         <activity android:name=".ProfileActivity" />
         <activity android:name=".EditProfileDataActivity" />
         <activity android:name=".ChangePasswordActivity" />

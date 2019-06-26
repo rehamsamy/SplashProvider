@@ -53,7 +53,7 @@ public class PageAdapter extends FragmentPagerAdapter {
             case 2:
                 return  "Completed";
             case 3:
-                return "Cancled";
+                return "Canceled";
             default:
                 return null;
         }
