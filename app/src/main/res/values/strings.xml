@@ -81,4 +81,6 @@
     <string name="verify">Verify</string>
     <string name="required_service_type">Required service:maintenance</string>
     <string name="setting">Setting</string>
+    <string name="accept_btn">Accept</string>
+    <string name="error_location_provider">error</string>
 </resources>

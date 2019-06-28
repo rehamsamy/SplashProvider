@@ -31,7 +31,7 @@ import butterknife.ButterKnife;
 
 public class HomeActivity extends AppCompatActivity implements OnMapReadyCallback {
 
-    @BindView(R.id.home_toolbar) Toolbar toolbar;
+   @BindView(R.id.home_toolbar) Toolbar toolbar;
     @BindView(R.id.map_view) MapView mapView;
     @BindView(R.id.nv) NavigationView navigationView;
     @BindView(R.id.drawer_layout) DrawerLayout drawerLayout;
@@ -49,9 +49,7 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.nav_menu);
-        toggle=new ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close);
-
-
+        toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
@@ -94,7 +92,7 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
 
                         break;
                     case R.id.setting:
-                        setLocale("ar");
+                        setLocale("en");
                         break;
 
 
@@ -134,8 +132,9 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         getBaseContext().getResources().updateConfiguration(config,getBaseContext().getResources().getDisplayMetrics());
 
-        Intent refresh = new Intent(this, HomeActivity.class);
-        startActivity(refresh);
+       Intent refresh = new Intent(this, HomeActivity.class);
+      // refresh.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+       startActivity(refresh);
 
     }
 
@@ -151,4 +150,8 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         googleMap1.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
     }
+
+
+
+
 }

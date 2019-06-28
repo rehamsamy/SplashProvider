@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.openthedoorprovider"
-    >
+    package="com.openthedoorprovider">
+
+    <uses-sdk tools:overrideLibrary="gun0912.tedbottompicker" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -10,25 +11,92 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-    <uses-sdk tools:overrideLibrary="gun0912.tedbottompicker"/>
-
     <uses-feature
         android:glEsVersion="0x00020000"
         android:required="true" />
 
     <application
-
-
-        android:configChanges="locale|orientation|keyboardHidden"
-        android:noHistory="true"
-
         android:allowBackup="true"
+        android:configChanges="locale|orientation|keyboardHidden"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:noHistory="true"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="false"
+        android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:supportsRtl">
+
+
+
+        <activity
+            android:name=".SignUp3Activity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".SignInActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".SignUp1Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SignUp2Activity"
+            android:screenOrientation="portrait" />
+
+         <!--<activity android:name=".SignUp3Activity" /> -->
+        <activity
+            android:name=".SignUp4Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".VerificationCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ForgetPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EditProfileDataActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChangePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ServiceSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CancelServiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SelectServiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FindAJobActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CompletedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EndServiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddReviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ReportProblemActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ReviewsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ContactUsActivity"
+            android:screenOrientation="portrait" />
+
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,42 +104,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignUp3Activity">
-
-        </activity>
-        <activity android:name=".SignInActivity">
-       </activity>
-        <activity android:name=".SignUp1Activity" />
-        <activity android:name=".SignUp2Activity" />
-        <!--<activity android:name=".SignUp3Activity" />-->
-        <activity android:name=".SignUp4Activity" />
-        <activity android:name=".VerificationCodeActivity" />
-        <activity android:name=".ForgetPasswordActivity" />
-        <activity android:name=".HomeActivity" ></activity>
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".EditProfileDataActivity" />
-        <activity android:name=".ChangePasswordActivity" />
-        <activity android:name=".ServiceSettingActivity" />
-        <activity android:name=".CancelServiceActivity" />
-        <activity android:name=".SelectServiceActivity" />
-        <activity android:name=".FindAJobActivity" />
-        <activity android:name=".HistoryActivity" />
-        <activity android:name=".CompletedActivity" />
-        <activity android:name=".EndServiceActivity" />
-        <activity android:name=".AddReviewActivity" />
-        <activity android:name=".ReportProblemActivity" />
-        <activity android:name=".ReviewsActivity" />
-        <activity android:name=".ContactUsActivity" />
 
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="API_KEY" />
+            android:value="AIzaSyD9WTvRW8Q7HX6rOhPMz08kcDzGI86Fxy0" />
 
-        <activity android:name=".popupActivity.InProcessPopupActivity" />
-        <activity android:name=".popupActivity.CurrentPopupActivity" />
-        <activity android:name=".popupActivity.CompletedPopupActivity" />
-        <activity android:name=".popupActivity.CanceledPopupActivity" />
-        <activity android:name=".StatisticsActivity"></activity>
+
+        <activity
+            android:name=".StatisticsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".MapActivity">
+        </activity>
     </application>
 
 </manifest>
