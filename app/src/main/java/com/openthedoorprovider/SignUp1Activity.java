@@ -37,7 +37,10 @@ public class SignUp1Activity extends AppCompatActivity {
                 if(!FUtilsValidation.isEmpty(phoneInput.getEditText(),"please enter your phone number!")
                        ) {
 
-                    startActivity(new Intent(getApplicationContext(), SignUp2Activity.class));
+                    Intent intent= new Intent(getApplicationContext(), SignUp2Activity.class);
+                    intent.putExtra("phone",phoneInput.getEditText().getText().toString());
+                    startActivity(intent);
+
                 }
             }
         });

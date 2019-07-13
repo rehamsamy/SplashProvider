@@ -20,21 +20,28 @@ public class SignUp2Activity extends AppCompatActivity {
     @BindView(R.id.signup2_toolbar) Toolbar toolbar;
     @BindView(R.id.back_btn) ImageView backImage;
     @BindView(R.id.password_input_layout) TextInputLayout passwordInput;
+    String phone;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up2);
         ButterKnife.bind(this);
-
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
+        Intent intent=getIntent();
+        phone=intent.getStringExtra("phone");
 
         continueBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!FUtilsValidation.isEmpty(passwordInput.getEditText(),"please enter the code!"))
-                startActivity(new Intent(getApplicationContext(),SignUp3Activity.class));
+                if(!FUtilsValidation.isEmpty(passwordInput.getEditText(),"please enter the code!")){
+                    Intent intent1=new Intent(getApplicationContext(),SignUp3Activity.class);
+                    intent1.putExtra("phone",phone);
+                    startActivity(intent1);
+
+                }
+
             }
         });
 

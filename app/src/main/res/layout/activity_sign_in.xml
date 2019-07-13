@@ -39,7 +39,6 @@
                     android:drawableStart="@drawable/login_phone"
                     android:drawablePadding="10dp"
                     android:hint="@string/phone"
-                    android:inputType="numberSigned"
                     android:drawableLeft="@drawable/login_phone" />
             </android.support.design.widget.TextInputLayout>
 

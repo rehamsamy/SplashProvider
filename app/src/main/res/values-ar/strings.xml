@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SplashProvider</string>
+    <string name="phone" translatable="false">رقم الهاتف</string>
+    <string name="password" translatable="false">كلمة المرور</string>
+    <string name="sign_in" translatable="false">الدخول</string>
+    <string name="forgit_password" translatable="false">نسيت كلمة المرور</string>
+    <string name="dont_have_account" translatable="false">"لا يوجد لديك حساب؟ "</string>
+    <string name="sign_up" translatable="false">تسجيل الدخول</string>
+    <string name="confirm_password" translatable="false">تاكيد كلمة المرور</string>
+    <string name="send_code" translatable="false">ارسال الرمز التاكيدي</string>
+    <string name="search" translatable="false">بحث</string>
+    <string name="current_location" translatable="false">العنوان الحالي</string>
+    <string name="find_job" translatable="false">ايجاد وظيفة</string>
+    <string name="log_out" translatable="false">تسجيل الخروج</string>
+    <string name="history" translatable="false">التاريخ</string>
+    <string name="reviews" translatable="false">المراجعة</string>
+    <string name="statistics" translatable="false">الاحصائيات</string>
+    <string name="notifications" translatable="false">الاشعارات</string>
+    <string name="contact_us" translatable="false">اتصل بنا</string>
+    <string name="about_company" translatable="false">عن الشركة</string>
+    <string name="service_setting" translatable="false">اعدادات الخدمة</string>
+    <string name="change_password" translatable="false">تغيير كلمة المرور</string>
+    <string name="profile" translatable="false">الملف الشخصي</string>
+    <string name="edit_profile" translatable="false">تعديل الملف الشخصي</string>
+    <string name="save" translatable="false">حفظ</string>
+    <string name="old_password" translatable="false">كلمه المرور السابقه</string>
+    <string name="new_password" translatable="false">كلمه المرور الجديدة</string>
+    <string name="confirm_new_password" translatable="false">تاكيد كلمه المرور الجديدة</string>
+    <string name="select_service" translatable="false">اخيار خدمة</string>
+    <string name="done" translatable="false">تم</string>
+    <string name="service_type_text" translatable="false">صيانة</string>
+    <string name="service_type" translatable="false">:نوع الخدمة</string>
+    <string name="your_location" translatable="false">عنوانك:</string>
+    <string name="switch_text" translatable="false">تنشيط استقبال التطبيقات :</string>
+    <string name="ignore" translatable="false">تجاهل</string>
+    <string name="start_service" translatable="false">تشغيل الخدمة</string>
+    <string name="end_service" translatable="false">انهاء الخدمة</string>
+    <string name="client_location" translatable="false">مكان العميل</string>
+    <string name="notes_txt" translatable="false">اترك هنا اي ملاحظات عن هذا الشخص:</string>
+    <string name="open" translatable="false">فتح</string>
+    <string name="close" translatable="false">غلق</string>
+    <string name="report_proplem" translatable="false">ابلغ عن مشكلة</string>
+    <string name="phone_number" translatable="false">01135788909</string>
+    <string name="cost_per_hour" translatable="false">التكلفة لكل ساعة:</string>
+    <string name="cost" translatable="false">10</string>
+    <string name="currency" translatable="false">جنية</string>
+    <string name="time_to_arrival" translatable="false">10 دقائق للوصول</string>
+    <string name="userName">اسم المستخدم</string>
+    <string name="enter_review">اكتب هنا مراجعتك</string>
+    <string name="cancell_reason">السبب في الالغاء؟</string>
+    <string name="write_reason">اكتب هنا الاسباب</string>
+    <string name="notes">الملاحظات</string>
+    <string name="houres_server_provider">ساعات مزود الخدمة:</string>
+    <string name="provider_houres_value">73 ساعة</string>
+    <string name="give_bonus">اعطاء مكفأة:</string>
+    <string name="service_provider_cost">تكلفة مزود الخدمة:</string>
+    <string name="discount">التخفيض:</string>
+    <string name="total_cost">التكلفة الكلية:</string>
+    <string name="address">العنوان</string>
+    <string name="website">الموقع الالكتروني:</string>
+    <string name="server_provider_info">معلومات مزود الخدمة:</string>
+    <string name="confirm">تاكيد</string>
+    <string name="finish_time_service">وقت انهاء الخدمة</string>
+    <string name="report_problem_about">تقرير عن مشكله مشكله ما:</string>
+    <string name="report_proplem_value">اكتب هنا الاسباب...</string>
+    <string name="continue_btn">استمرار</string>
+    <string name="upload_image_btn">تحميل الصور المطلوبة</string>
+    <string name="verify">تاكيد</string>
+    <string name="required_service_type">الخدمه المطلوبة</string>
+    <string name="location" translatable="false">"الشارع والمنطقه والمدينة. "</string>
+    <string name="setting">الاعدادات</string>
+    <string name="accept_btn">قبول</string>
+    <string name="min_max_charg">اقل قيمة للشحن 100$, واعلى قيمه 1000$</string>
+</resources>

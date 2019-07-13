@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.openthedoorprovider.pojo.LoginResponse;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -18,6 +21,10 @@ public class ProfileActivity extends AppCompatActivity {
     @BindView(R.id.edit_profile_btn) MaterialButton editProfileBtn;
     @BindView(R.id.service_setting_btn) MaterialButton serviceSettingBtn;
     @BindView(R.id.back_btn) ImageView backImage;
+    @BindView(R.id.user_name) TextView userName;
+    @BindView(R.id.user_email) TextView userEmail;
+    @BindView(R.id.user_phone) TextView userPhone;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +32,11 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
         ButterKnife.bind(this);
+
+        LoginResponse response = SignInActivity.loginResponse;
+        userName.setText(response.getProviderinfo().getName());
+        userEmail.setText(response.getProviderinfo().getEmail());
+        userPhone.setText(response.getProviderinfo().getPhone());
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
