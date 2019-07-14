@@ -62,6 +62,7 @@ public class VerificationCodeActivity extends AppCompatActivity {
 
         try {
             inputStream1=getContentResolver().openInputStream(uriListData.get(0));
+            inputStream2=getContentResolver().openInputStream(uriListData.get(1));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -150,6 +151,7 @@ public class VerificationCodeActivity extends AppCompatActivity {
         }
         return  outputStream.toByteArray();
     }
+
 
 
 }

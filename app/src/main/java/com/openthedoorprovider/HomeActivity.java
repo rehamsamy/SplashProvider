@@ -3,6 +3,8 @@ package com.openthedoorprovider;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.location.Location;
 import android.support.annotation.NonNull;
 import android.support.design.button.MaterialButton;
 import android.support.design.widget.NavigationView;
@@ -20,6 +22,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -70,6 +73,7 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
             mapView.onCreate(null);
             mapView.onResume();
             mapView.getMapAsync(this);
+            //googleMap.setMyLocationEnabled(true);
         }
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -97,7 +101,7 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
                         break;
 
                     case R.id.notifications:
-                       
+
                         break;
                     case R.id.statistics:
                        // startActivity(new Intent(getApplicationContext(), StatisticsActivity.class));
@@ -179,12 +183,30 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
         MapsInitializer.initialize(getApplicationContext());
         googleMap = googleMap1;
         googleMap1.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-        googleMap1.addMarker(new MarkerOptions().position(new LatLng(40.45, -74.8888)).title("the place")
-                .snippet("dddddddddddddddddd"));
-        CameraPosition cameraPosition = CameraPosition.builder().target(new LatLng(40.45, -74.8888)
-        ).zoom(16).bearing(0).tilt(45).build();
+
+        googleMap1.setOnMyLocationChangeListener(new GoogleMap.OnMyLocationChangeListener() {
+            @Override
+            public void onMyLocationChange(Location location) {
+                LatLng latLng=new LatLng(location.getLatitude(),location.getLongitude());
+                googleMap1.addMarker(new MarkerOptions().position(latLng).title("the place")
+                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA))
+                        .snippet("dddddddddddddddddd"));
+
+                CameraPosition cameraPosition = CameraPosition.builder()
+                        .target(latLng).zoom(14)
+                        .bearing(0).tilt(45).build();
 
         googleMap1.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+
+
+            }
+        });
+//        googleMap1.addMarker(new MarkerOptions().position(new LatLng(40.45, -74.8888)).title("the place")
+//                .snippet("dddddddddddddddddd"));
+//        CameraPosition cameraPosition = CameraPosition.builder().target(new LatLng(40.45, -74.8888)
+//        ).zoom(16).bearing(0).tilt(45).build();
+//
+//        googleMap1.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
     }
 
 
