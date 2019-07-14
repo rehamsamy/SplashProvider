@@ -3,12 +3,14 @@ package com.openthedoorprovider.utils;
 import com.openthedoorprovider.pojo.ChangePasswordResponse;
 import com.openthedoorprovider.pojo.LoginResponse;
 import com.openthedoorprovider.pojo.RegisterProviderResponse;
+import com.openthedoorprovider.pojo.ServiceResponse;
 import com.openthedoorprovider.pojo.UpdateProfileResponse;
 
 import java.util.Map;
 
 import okhttp3.MultipartBody;
 import retrofit2.Call;
+import retrofit2.http.GET;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
@@ -32,5 +34,7 @@ public interface RetrofitInterface {
     Call<ChangePasswordResponse> changePassword(@QueryMap Map<String,Object> map);
 
 
+    @GET("api/getservices")
+    Call<ServiceResponse> getService(@QueryMap Map<String,Object> map);
 
 }

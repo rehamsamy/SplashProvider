@@ -23,11 +23,21 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.openthedoorprovider.pojo.ServiceResponse;
+import com.openthedoorprovider.pojo.ServicesItem;
+import com.openthedoorprovider.utils.RetrofitClientInstance;
+import com.openthedoorprovider.utils.RetrofitInterface;
 
+import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class HomeActivity extends AppCompatActivity implements OnMapReadyCallback {
 
@@ -40,12 +50,14 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
     public static final String lang="en";
     ActionBarDrawerToggle toggle;
     GoogleMap googleMap;
+    RetrofitInterface retrofitInterface;
+   public static List<ServicesItem> servicesList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
-
+ retrofitInterface= RetrofitClientInstance.getRetrofitInstance();
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.nav_menu);
@@ -85,10 +97,11 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
                         break;
 
                     case R.id.notifications:
-                        startActivity(new Intent(getApplicationContext(), AddReviewActivity.class));
+                       
                         break;
                     case R.id.statistics:
-                        startActivity(new Intent(getApplicationContext(), StatisticsActivity.class));
+                       // startActivity(new Intent(getApplicationContext(), StatisticsActivity.class));
+                        startActivity(new Intent(getApplicationContext(), AddReviewActivity.class));
 
                         break;
                     case R.id.setting:
@@ -111,7 +124,30 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
         findJobBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),FindAJobActivity.class));
+                Map<String,Object> map=new HashMap<>();
+                map.put("page",1);
+                map.put("limit",1);
+                map.put("api_token",SignInActivity.loginResponse.getToken());
+
+                Call<ServiceResponse> call=retrofitInterface.getService(map);
+
+                call.enqueue(new Callback<ServiceResponse>() {
+                    @Override
+                    public void onResponse(Call<ServiceResponse> call, Response<ServiceResponse> response) {
+                      servicesList=  response.body().getServices();
+                        if (response.body().isStatus()) {
+                            Intent intent=new Intent(getApplicationContext(), FindAJobActivity.class);
+                            startActivity(intent);
+
+                        }
+                    }
+                    @Override
+                    public void onFailure(Call<ServiceResponse> call, Throwable t) {
+
+                    }
+                });
+
+
             }
         });
 
