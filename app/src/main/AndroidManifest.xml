@@ -25,15 +25,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:supportsRtl">
-
-
-
         <activity
             android:name=".SignUp3Activity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".SignInActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".SignUp1Activity"
             android:screenOrientation="portrait" />
@@ -41,7 +38,7 @@
             android:name=".SignUp2Activity"
             android:screenOrientation="portrait" />
 
-         <!--<activity android:name=".SignUp3Activity" /> -->
+        <!-- <activity android:name=".SignUp3Activity" /> -->
         <activity
             android:name=".SignUp4Activity"
             android:screenOrientation="portrait" />
@@ -96,7 +93,6 @@
         <activity
             android:name=".ContactUsActivity"
             android:screenOrientation="portrait" />
-
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -109,12 +105,11 @@
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyD9WTvRW8Q7HX6rOhPMz08kcDzGI86Fxy0" />
 
-
         <activity
             android:name=".StatisticsActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".MapActivity">
-        </activity>
+        <activity android:name=".MapActivity"></activity>
+        <activity android:name=".NotificationActivity"></activity>
     </application>
 
 </manifest>

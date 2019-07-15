@@ -83,4 +83,6 @@
     <string name="setting">Setting</string>
     <string name="accept_btn">Accept</string>
     <string name="error_location_provider">error</string>
+    <string name="notify_message_info">notify message info</string>
+    <string name="notification">Notification</string>
 </resources>

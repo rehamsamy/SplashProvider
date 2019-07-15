@@ -101,7 +101,7 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
                         break;
 
                     case R.id.notifications:
-
+                        startActivity(new Intent(getApplicationContext(), NotificationActivity.class));
                         break;
                     case R.id.statistics:
                        // startActivity(new Intent(getApplicationContext(), StatisticsActivity.class));
@@ -208,6 +208,11 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
 //
 //        googleMap1.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
     }
+
+
+
+
+
 
 
 

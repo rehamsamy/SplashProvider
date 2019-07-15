@@ -1,7 +1,10 @@
 package com.openthedoorprovider.utils;
 
 import com.openthedoorprovider.pojo.ChangePasswordResponse;
+import com.openthedoorprovider.pojo.DeleteNotificationResponse;
 import com.openthedoorprovider.pojo.LoginResponse;
+import com.openthedoorprovider.pojo.NotificationResponse;
+import com.openthedoorprovider.pojo.ProvidernotficationItem;
 import com.openthedoorprovider.pojo.RegisterProviderResponse;
 import com.openthedoorprovider.pojo.ServiceResponse;
 import com.openthedoorprovider.pojo.UpdateProfileResponse;
@@ -37,4 +40,11 @@ public interface RetrofitInterface {
     @GET("api/getservices")
     Call<ServiceResponse> getService(@QueryMap Map<String,Object> map);
 
+
+    @GET("api/providernotfication")
+    Call<NotificationResponse> getNotification(@QueryMap Map<String,Object> map);
+
+
+    @POST("api/deleteprovidernotfication")
+    Call<DeleteNotificationResponse> deleteNotification(@QueryMap Map<String,Object> map);
 }

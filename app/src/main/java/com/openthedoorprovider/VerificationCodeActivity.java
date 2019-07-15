@@ -104,8 +104,9 @@ public class VerificationCodeActivity extends AppCompatActivity {
 
 
 
+
         Log.v("LoginActivity","rrrrrrrrrr"+"\n"+name+"\n"+email+"\n"+password+"\n"+confirmPassword+"\n"+phone);
-          // File file=new File();
+           //File file=new File();
         RequestBody requestBody = RequestBody.create(MediaType.parse("*/*"), bytes);
         MultipartBody.Part fileToUpload = MultipartBody.Part.createFormData("file","name", requestBody);
 
